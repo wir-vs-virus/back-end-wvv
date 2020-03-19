@@ -7,10 +7,10 @@ import org.wirvsvirushackathon.projekt1.config.AppProperties;
 
 @SpringBootApplication
 @EnableConfigurationProperties(AppProperties.class)
-public class Projekt1Application {
+public class Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(Projekt1Application.class, args);
+        SpringApplication.run(Application.class, args);
     }
 
 }
