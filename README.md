@@ -1,1 +1,2 @@
-# back-end-wvv
+# wirvsvuris
+https://wirvsvirushackathon.org/
