@@ -1,1 +1,1 @@
-SPRING_PROFILES_ACTIVE=locale mvn spring-boot:run
+SPRING_PROFILES_ACTIVE=local mvn spring-boot:run
