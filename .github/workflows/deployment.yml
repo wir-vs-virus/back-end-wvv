@@ -5,7 +5,7 @@ name: Java CI
 
 on:
   push:
-    branches: [ new_workflow ]
+    branches: [ master ]
 
 jobs:
   build:
