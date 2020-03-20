@@ -31,7 +31,7 @@ jobs:
           key: ${{ secrets.SERVER_PRIV_KEY }}
           port: ${{ secrets.SERVER_PORT }}
           script: |
-            docker stop virus
+            docker ps -q --filter "name=virus" | grep -q . && docker stop virus
             docker pull virus
             docker run d -p 50123:50123 --name virus --rm |
               --network wvv |
