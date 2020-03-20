@@ -19,3 +19,15 @@ jobs:
           username: ${{ secrets.DOCKER_USER }}
           password: ${{ secrets.DOCKER_PW }}
           dockerfile: scripts/Dockerfile_with_mvn_build
+  deploy:
+    needs: push
+    runs-on: ubuntu-latest
+    steps:
+      - name: executing remote ssh commands using password
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SERVER_PRIV_KEY }}
+          port: ${{ secrets.SERVER_PORT }}
+          script: ./scripts/updateAndRestartContainer.sh back-end-wvv/config dev
