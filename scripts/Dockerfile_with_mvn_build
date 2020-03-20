@@ -1,0 +1,11 @@
+FROM maven:3.6.3-jdk-11-slim as builder
+
+COPY . .
+RUN mvn clean install
+
+FROM openjdk:11.0.6-jre-slim
+
+COPY --from=builder /target/*.jar /app.jar
+VOLUME /config
+
+ENTRYPOINT [ "sh", "-c", "java -jar /app.jar"]
