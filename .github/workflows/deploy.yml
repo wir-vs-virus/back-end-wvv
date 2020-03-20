@@ -33,7 +33,4 @@ jobs:
           script: |
             docker ps -q --filter "name=virus" | grep -q . && docker stop virus
             docker pull floge77/back-end-wvv
-            docker run -d -p 50123:50123 --name virus --rm |
-              --network wvv |
-              -v ~/back-end-wvv/config:/config |
-              -e SPRING_PROFILES_ACTIVE=dev floge77/back-end-wvv
+            docker run -d -p 50123:50123 --name virus --rm --network wvv -v ~/back-end-wvv/config:/config -e SPRING_PROFILES_ACTIVE=dev floge77/back-end-wvv
