@@ -4,4 +4,4 @@ COPY target/*.jar /app.jar
 ENV CONFIG_LOCATION=/config/
 VOLUME /config
 
-ENTRYPOINT [ "sh", "-c", "java -jar /app.jar --spring.config.location=$CONFIG_LOCATION" ]
+ENTRYPOINT [ "sh", "-c", "java -jar /app.jar"]
