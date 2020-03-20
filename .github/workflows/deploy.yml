@@ -23,6 +23,12 @@ jobs:
     needs: push
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/cache@v1
+        with:
+          path: ~/.m2/repository
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-maven-
       - name: executing remote ssh commands using password
         uses: appleboy/ssh-action@master
         with:
@@ -32,7 +38,7 @@ jobs:
           port: ${{ secrets.SERVER_PORT }}
           script: |
             docker stop virus
-            docker pull
+            docker pull virus
             docker run d -p 50123:50123 --name virus --rm |
               --network wvv |
               -v ~/back-end-wvv/config:/config |
