@@ -14,12 +14,6 @@ spring:
     console:
       enabled: true
 
-server:
-  ssl:
-    key-store: classpath:local_self_signed.p12
-    key-store-password: securePassword
-    key-password: securePassword
-
 app:
   auth:
     tokenSecret: superSecretTokenKey
