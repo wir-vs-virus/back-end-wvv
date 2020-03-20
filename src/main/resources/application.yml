@@ -9,14 +9,14 @@ spring:
           google:
             clientId: yourClientIdGoesHere
             clientSecret: yourSecretGoesHere
-            redirectUri: "{baseUrl}/oauth2/callback/{registrationId}"
+            redirectUri: "https://front-end-wvv.now.sh/auth/google"
             scope:
               - email
               - profile
           facebook:
             clientId: yourClientIdGoesHere
             clientSecret: yourSecretGoesHere
-            redirectUri: "{baseUrl}/oauth2/callback/{registrationId}" # Note that facebook now mandates the use of https redirect URIs, so make sure your app supports https in production
+            redirectUri: "https://front-end-wvv.now.sh/auth/facebook" # Note that facebook now mandates the use of https redirect URIs, so make sure your app supports https in production
             scope:
               - email
               - public_profile
