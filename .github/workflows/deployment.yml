@@ -5,7 +5,7 @@ name: Java CI
 
 on:
   push:
-    branches: [ master ]
+    branches: [ deploy-to-server ]
 
 jobs:
   build:
