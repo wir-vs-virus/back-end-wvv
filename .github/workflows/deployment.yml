@@ -42,8 +42,8 @@ jobs:
         name: artifact
     - name: Build Docker image
       run: |
-        mkdir -p back-end-wvv/target
-        mv artifact/wvv-app-0.0.1-SNAPSHOT.jar back-end-wvv/target
+        mkdir -p target
+        mv artifact/wvv-app-0.0.1-SNAPSHOT.jar target/
         docker build -t floge77/back-end-wvv:latest back-end-wvv
     - name: Push Docker image
       run: |
