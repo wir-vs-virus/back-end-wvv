@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Build Maven project
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v1
     - uses: actions/cache@v1
       with:
         path: ~/.m2/repository
@@ -35,7 +35,7 @@ jobs:
     needs: build 
     name: Build Docker image and deploy to server
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v1
     - name: Download Maven build artifact
       uses: actions/download-artifact@v1
       with:

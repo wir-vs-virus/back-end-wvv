@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>org.wirvsvirushackathon</groupId>
-    <artifactId>projekt1</artifactId>
+    <artifactId>wvv-app</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>projekt1</name>
     <description>Wir VS Virus Hackathon Projekt</description>
