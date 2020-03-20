@@ -9,4 +9,4 @@ if [ -z "$2" ]; then
 	exit 1
 fi
 
-docker run -it -p 80:1337 --name virus --rm -v $1:/config -e SPRING_PROFILES_ACTIVE=$2 floge77/back-end-wvv
+docker run -it -p 50123:50123 --name virus --rm -v $1:/config -e SPRING_PROFILES_ACTIVE=$2 floge77/back-end-wvv
