@@ -13,4 +13,4 @@ In case you don't have jdk11 or higher please build the Dockerfile located in `s
 
 ## Run Docker Container
 
-After you built the docker image run the container as follows: `scripts/runContainer.sh path/to/your/application-config-dir active-sprin-profile`, e.g. `scripts/runContainer.sh $HOME/spring/config dev`.
+After you built the docker image run the container as follows: `scripts/runContainer.sh path/to/your/application-config-dir active-spring-profile`, e.g. `scripts/runContainer.sh $HOME/spring/config dev`.
