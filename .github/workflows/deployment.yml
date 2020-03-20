@@ -44,7 +44,7 @@ jobs:
       run: |
         mkdir -p target
         mv artifact/wvv-app-0.0.1-SNAPSHOT.jar target/
-        docker build -t floge77/back-end-wvv:latest back-end-wvv
+        docker build -t floge77/back-end-wvv:latest .
     - name: Push Docker image
       run: |
           echo "${{ secrets.DOCKER_PW }}" | docker login docker.io -u "${{ secrets.DOCKER_USER }}" --password-stdin
