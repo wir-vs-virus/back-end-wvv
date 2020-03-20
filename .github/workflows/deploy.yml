@@ -30,4 +30,10 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SERVER_PRIV_KEY }}
           port: ${{ secrets.SERVER_PORT }}
-          script: ./scripts/updateAndRestartContainer.sh back-end-wvv/config dev
+          script: |
+            docker stop virus
+            docker pull
+            docker run d -p 50123:50123 --name virus --rm |
+              --network wvv |
+              -v ~/back-end-wvv/config:/config |
+              -e SPRING_PROFILES_ACTIVE=dev floge77/back-end-wvv
